@@ -1,4 +1,4 @@
-# RS_Creative – Inventarplan
+# RS – Inventarplan
 
 Interaktiver Inventarplan für den Altbau: Altbau EG und Altbau OG, zusammen **256 Möbel und Lampen**. Jedes Möbel hat seine Inventarnummer, seinen Raum und seinen Platz im Grundriss. Der Server speichert alle Änderungen, jede Änderung steht im Verlauf und lässt sich zurücknehmen.
 

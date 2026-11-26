@@ -1,6 +1,6 @@
-# RS_Creative – Prompts zum Nachbauen
+# RS-Inventarplan – Prompts zum Nachbauen
 
-Diese Datei enthält die Arbeitsschritte als fertige Prompts, in der Reihenfolge, in der RS_Creative 1:1 entsteht. Jeder Prompt steht in einem Kasten und wird so an Claude geschickt. Nach jedem Schritt kurz testen, dann erst den nächsten schicken.
+Diese Datei enthält die Arbeitsschritte als fertige Prompts, in der Reihenfolge, in der RS - Inventarplan 1:1 entsteht. Nach jedem Schritt kurz testen, dann erst den nächsten schicken.
 
 **Ergebnis:** Ein interaktiver Inventarplan mit Grundriss, Suche, Verlauf und 3D-Ansicht. Er läuft als kleiner Python-Server (nur Standardbibliothek, SQLite) und hat 256 Möbel und Lampen auf zwei Etagen.
 

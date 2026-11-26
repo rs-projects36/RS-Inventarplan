@@ -26,7 +26,7 @@ Ohne weitere Einstellung läuft es auf **http://127.0.0.1:8080**, nur auf deinem
 
 1. ZIP mit Rechtsklick → „Alle extrahieren …“ vollständig entpacken.
 2. Im Ordner `start.bat` doppelt anklicken. Der Browser öffnet sich nach zwei Sekunden.
-3. Das schwarze Fenster offen lassen, solange du RS_Creative nutzt.
+3. Das schwarze Fenster offen lassen, solange du RS – Inventarplan nutzt.
 
 Im Ordner `python` liegt ein portables Python. Es wird nichts installiert.
 
@@ -52,32 +52,32 @@ Nötig ist nur Python 3.9 oder neuer, es gibt keine weiteren Pakete.
 
 | Schalter | Bedeutung | Standard |
 |---|---|---|
-| `RSC_USERS` | Benutzer als `name:passwort`, mehrere mit Komma, Passwort mindestens 8 Zeichen | leer (nur lokal) |
-| `RSC_HOST` | `127.0.0.1` = nur dieser Rechner, `0.0.0.0` = im Netz (dann sind Benutzer Pflicht) | `127.0.0.1` |
-| `RSC_PORT` | Port. Ist 8080 belegt, z. B. `8081` eintragen | `8080` |
-| `RSC_DATA` | Ordner der Datenbank (diesen Ordner sichern) | `./data` |
-| `RSC_MAX_VERSIONS` | Wie viele Versionen im Verlauf bleiben | `500` |
-| `RSC_TRUST_PROXY` | Nur `1`, wenn ein Reverse Proxy mit HTTPS davorsteht | `0` |
-| `RSC_HTTPS` | `1` setzt das Secure-Merkmal am Cookie | `0` |
-| `RSC_QUIET` | `1` = nur Fehler und Anmeldungen protokollieren | aus |
-| `RSC_LOG` | Protokolldatei, ab 5 MB wird zu `.1` rotiert | aus |
-| `RSC_BACKUP_KEEP` | Wie viele tägliche Sicherungen in `data/backups` bleiben | `30` |
+| `RSIP_USERS` | Benutzer als `name:passwort`, mehrere mit Komma, Passwort mindestens 8 Zeichen | leer (nur lokal) |
+| `RSIP_HOST` | `127.0.0.1` = nur dieser Rechner, `0.0.0.0` = im Netz (dann sind Benutzer Pflicht) | `127.0.0.1` |
+| `RSIP_PORT` | Port. Ist 8080 belegt, z. B. `8081` eintragen | `8080` |
+| `RSIP_DATA` | Ordner der Datenbank (diesen Ordner sichern) | `./data` |
+| `RSIP_MAX_VERSIONS` | Wie viele Versionen im Verlauf bleiben | `500` |
+| `RSIP_TRUST_PROXY` | Nur `1`, wenn ein Reverse Proxy mit HTTPS davorsteht | `0` |
+| `RSIP_HTTPS` | `1` setzt das Secure-Merkmal am Cookie | `0` |
+| `RSIP_QUIET` | `1` = nur Fehler und Anmeldungen protokollieren | aus |
+| `RSIP_LOG` | Protokolldatei, ab 5 MB wird zu `.1` rotiert | aus |
+| `RSIP_BACKUP_KEEP` | Wie viele tägliche Sicherungen in `data/backups` bleiben | `30` |
 
 Sollen mehrere Personen im Netz zugreifen, sind Benutzer Pflicht. Ohne Benutzer startet der Server nur auf `127.0.0.1`.
 
 ### Anmeldung mit Microsoft Entra ID
 
-Mit `RSC_AUTH` wählst du die Anmeldeart:
+Mit `RSIP_AUTH` wählst du die Anmeldeart:
 
-- `lokal` (Standard): eigene Anmeldeseite mit `RSC_USERS`
-- `oidc` (empfohlen): RS_Creative meldet selbst bei Microsoft Entra ID an. Nötig sind `RSC_OIDC_TENANT`, `RSC_OIDC_CLIENT_ID`, `RSC_OIDC_CLIENT_SECRET` und genau eine `RSC_PUBLIC_URL` (https, nur localhost darf http sein).
-- `entra`: Die Anmeldung übernimmt eine vorgeschaltete Schicht (Azure App Service, Entra Application Proxy oder ein anderer Reverse Proxy). RS_Creative liest den Benutzer aus einer Kopfzeile.
+- `lokal` (Standard): eigene Anmeldeseite mit `RSIP_USERS`
+- `oidc` (empfohlen): RS – Inventarplan meldet selbst bei Microsoft Entra ID an. Nötig sind `RSIP_OIDC_TENANT`, `RSIP_OIDC_CLIENT_ID`, `RSIP_OIDC_CLIENT_SECRET` und genau eine `RSIP_PUBLIC_URL` (https, nur localhost darf http sein).
+- `entra`: Die Anmeldung übernimmt eine vorgeschaltete Schicht (Azure App Service, Entra Application Proxy oder ein anderer Reverse Proxy). RS – Inventarplan liest den Benutzer aus einer Kopfzeile.
 
-Mit `RSC_EDIT_ROLE` dürfen nur Personen mit dieser Rolle bearbeiten, alle anderen sehen den Plan nur an. Alle Schalter stehen mit Erklärung in `.env.example`, die Einrichtung steht in `ENTRA.md`.
+Mit `RSIP_EDIT_ROLE` dürfen nur Personen mit dieser Rolle bearbeiten, alle anderen sehen den Plan nur an. Alle Schalter stehen mit Erklärung in `.env.example`, die Einrichtung steht in `ENTRA.md`.
 
 ## Daten und Sicherung
 
-Die Datenbank liegt in `data/rs-creative.db` (der Ordner entsteht beim ersten Start).
+Die Datenbank liegt in `data/rs-inventarplan.db` (der Ordner entsteht beim ersten Start).
 
 ```bash
 python server.py backup sicherung.db      # Sicherung in eine Datei
@@ -101,7 +101,7 @@ Chrome und Edge: Installieren-Symbol in der Adressleiste. iPhone und iPad (Safar
 ## Projektstruktur
 
 ```
-rs-creative/
+rs-inventarplan/
 ├── server.py                  Server (nur Python-Standardbibliothek, SQLite)
 ├── start.bat                  Start unter Windows
 ├── start.command              Start unter Mac
@@ -152,4 +152,4 @@ Die Arbeitsschritte als fertige Prompts stehen in [`PROMPTS.md`](PROMPTS.md).
 
 ---
 
-© RS_Creative · Developed by Rujahn.S
+© RS – Inventarplan · Developed by Rujahn.S

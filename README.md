@@ -2,7 +2,7 @@
 
 Interaktiver Inventarplan für den Altbau: Altbau EG und Altbau OG, zusammen **256 Möbel und Lampen**. Jedes Möbel hat seine Inventarnummer, seinen Raum und seinen Platz im Grundriss. Der Server speichert alle Änderungen, jede Änderung steht im Verlauf und lässt sich zurücknehmen.
 
-Ohne weitere Einstellung läuft RS_Creative auf **http://127.0.0.1:8080**, nur auf deinem eigenen Rechner und ohne Anmeldung.
+Ohne weitere Einstellung läuft es auf **http://127.0.0.1:8080**, nur auf deinem eigenen Rechner und ohne Anmeldung.
 
 *Developed by Rujahn.S*
 

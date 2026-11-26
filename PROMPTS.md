@@ -1,4 +1,4 @@
-# RS-Inventarplan – Prompts zum Nachbauen
+# RS – Inventarplan – Prompts zum Nachbauen
 
 Diese Datei enthält die Arbeitsschritte als fertige Prompts, in der Reihenfolge, in der RS - Inventarplan 1:1 entsteht. Nach jedem Schritt kurz testen, dann erst den nächsten schicken.
 
